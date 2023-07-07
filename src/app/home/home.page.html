@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header >
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+ <swiper-container [initialSlide]="1"
+ [speed]="400"
+ [loop]="true"
+ >
+  
+  <swiper-slide>
+    <h1>Titulo Principal</h1>
+    <img src="https://www.mundodeportivo.com/alfabeta/hero/2022/04/elden.1649248361.6078.jpg?width=768&aspect_ratio=16:9&format=nowebp">
+    <ion-icon class="slide-icon" name="accessibility-outline"></ion-icon>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <p class="my-favorite-text-color">Hola soy la explicacion de slideHola soy la explicacion de slideHola soy la explicacion de slideHola soy la explicacion de slide </p>
+  </swiper-slide>
+  
+  <swiper-slide>
+    <h1>Titulo secundario</h1>
+    <img src="assets/images/perrito.jpg">
+    <ion-icon name="map-outline"></ion-icon>
+
+    <p>Hola soy la explicacion de slideHola soy la explicacion de slideHola soy la explicacion de slideHola soy la explicacion de slide </p>
+  </swiper-slide>
+  
+ </swiper-container>
 </ion-content>
