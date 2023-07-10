@@ -4,7 +4,7 @@
   }
   
   .my-favorite-text-color{
-    color: blueviolet;
+    color: var(--morado);
     
   }
   
@@ -14,7 +14,7 @@
     border: 2px solid black;
   }
   .titulo {
-    color:var(--ion-color-primary);
+    color:var(--color-primario);
     text-align: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 10px;
@@ -22,17 +22,17 @@
   .parrafo {
     text-align: justify;
     font-family: Arial, sans-serif;
-    color: orangered;
+    color: var(--naranja);
   }
   
   ion-content{
-    --background:white;
+    --background:var(--colorbackground);
   }
 
   .close-icon{
 
     font-size: 40px;
-    color: red;
+    color: var(--rosa);
     display: block;
     margin-left: auto;
   }
