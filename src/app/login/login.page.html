@@ -1,16 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title class="titulo">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form [formGroup]="loginForm">
-  <ion-item>
+
+  <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+  <ion-item class="color_form"> 
     <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
   </ion-item>
 
-  <div class="validation-erros">
+  <div class="error">
     <ng-container *ngFor="let validation of validate_message.email">
       <div *ngIf="loginForm.get('email')?.hasError(validation.type)
       && loginForm.get('email')?.dirty">
@@ -20,9 +21,33 @@
     </ng-container>
   </div>
 
-  <ion-item>
-    <ion-input label="Password" labelPlacement="floating" placeholder="******" formControlName="password"></ion-input>
+  <ion-item class="color_form">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input placeholder="******" formControlName="password" type="password"></ion-input>
   </ion-item>
+  
+  <div class="error">
+    <ng-container *ngFor="let validation of validate_message.password">
+      <div *ngIf="(loginForm.get('password')?.hasError(validation.type) ||
+                  (validation.type === 'minLength' && loginForm.get('password')?.value?.length < 6) ||
+                  (validation.type === 'maxLength' && loginForm.get('password')?.value?.length > 30))
+                  && loginForm.get('password')?.dirty">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div>
+  
+
+
+
+  <ion-button 
+  expand="full"
+  shape="round"
+  color="secondary"
+  [disabled]="!loginForm.valid"
+  type="submit">
+      ingresar
+  </ion-button>
 
   </form>
 </ion-content>
