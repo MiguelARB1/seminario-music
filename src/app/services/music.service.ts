@@ -23,4 +23,17 @@ export class MusicService {
       response => response.json()
     );
   }
+
+
+  getAlbumsTracks(album_id: number){
+    return fetch(`${this.urlServer}/tracks/album/${album_id}`).then(
+      response => response.json()
+    )
+  }
+  
+  getAlbums(){
+    return fetch(`${this.urlServer}/albums`).then(
+      response => response.json()
+    )
+  }
 }
