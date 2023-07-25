@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="color_form">
     <ion-title class="titulo">Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,7 +8,7 @@
 
   <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
   <ion-item class="color_form"> 
-    <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
+    <ion-input label="EMAIL" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
   </ion-item>
 
   <div class="error">
@@ -22,8 +22,7 @@
   </div>
 
   <ion-item class="color_form">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input placeholder="******" formControlName="password" type="password"></ion-input>
+    <ion-input  label="PASSWORD" labelPlacement="floating" placeholder="******" formControlName="password" type="password"></ion-input>
   </ion-item>
   
   <div class="error">

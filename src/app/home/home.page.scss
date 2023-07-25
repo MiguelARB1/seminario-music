@@ -1,12 +1,77 @@
-ion-avatar{
+ion-header {
+    --ion-background-color: #121212; /* Fondo oscuro para el encabezado */
+    --ion-color-base: #1db954; /* Letras en verde */
+  }
+  
+  ion-content {
+    --ion-background-color: #121212; /* Fondo oscuro para el contenido */
+    --ion-color-base: #1db954; /* Letras en verde */
+  }
+  
+  ion-footer {
+    --ion-background-color: #121212; /* Fondo oscuro para el pie */
+    --ion-color-base: #1db954; /* Letras en verde */
+  }
+  
+  ion-avatar {
     height: 100px;
     width: 100px;
-}
-
-swiper-slide{
+  }
+  
+  swiper-slide {
     height: 120px;
-}
-
-.album-style {
+  }
+  
+  .album-style {
     --border-radius: 4px;
-}
+  }
+  
+  /* Estilos para el título "Artistas" y "Álbumes" */
+  h1 {
+    color: #1db954; /* Color de las letras en verde */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el texto en el pie del reproductor de música */
+  ion-grid {
+    color: #1db954; /* Color de las letras en verde */
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el ícono de corazón y el ícono de reproducción / pausa */
+  ion-icon {
+    color: #1db954; /* Color de los íconos en verde */
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el ícono de reproducción / pausa cuando se pasa el mouse */
+  ion-icon:hover {
+    opacity: 0.8; /* Opacidad al pasar el mouse sobre el ícono */
+  }
+  
+  /* Estilos para la barra de progreso */
+  ion-progress-bar {
+    --background: #444; /* Color de fondo de la barra de progreso */
+    --buffer: #1db954; /* Color del buffer de la barra de progreso */
+    --progress-background: #1db954; /* Color de fondo del progreso de la barra */
+  }
+  
+  /* Estilos para el nombre de la canción en el pie del reproductor de música */
+  ion-text {
+    color: #1db954; /* Color de las letras en verde */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el contenedor de los íconos en el pie del reproductor de música */
+  ion-col.ion-text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

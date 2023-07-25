@@ -2,3 +2,51 @@
     margin:0 auto;
     
 }
+/* Estilos para el fondo oscuro del menú */
+ion-menu,
+ion-header,
+ion-footer {
+  --ion-background-color: #121212; /* Color de fondo oscuro */
+  --ion-color-base: #1db954; /* Color de letras en verde */
+}
+
+/* Estilos para el encabezado del menú */
+ion-toolbar {
+  --ion-background-color: #121212; /* Color de fondo oscuro para la barra de herramientas */
+  --ion-color-base: #1db954; /* Color de letras en verde para la barra de herramientas */
+}
+
+/* Estilos para el título del menú */
+ion-title {
+  color: #1db954; /* Color de letras en verde */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos para los íconos del menú */
+ion-icon {
+  color: #1db954; /* Color de íconos en verde */
+  font-size: 24px;
+}
+
+/* Estilos para los ítems del menú */
+ion-item {
+  --color: #1db954; /* Color de letras en verde para los ítems */
+  cursor: pointer;
+}
+
+/* Estilos para los ítems del menú cuando se pasa el mouse */
+ion-item:hover {
+  background-color: rgba(29, 185, 84, 0.2); /* Color de fondo cuando se pasa el mouse */
+}
+
+/* Estilos para el ícono de flecha hacia adelante (cerrar menú) */
+ion-button {
+  --color: #1db954; /* Color del botón en verde */
+}
+
+/* Estilos para el ícono de flecha hacia adelante cuando se pasa el mouse */
+ion-button:active {
+  --color: #1db954; /* Color del botón presionado en verde */
+  opacity: 0.8; /* Opacidad al presionar el botón */
+}

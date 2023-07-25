@@ -1,18 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
-      <ion-button
-      (click)="goToLogin()"
-      >
+      <ion-button (click)="goToLogin()">
         Atras
       </ion-button>
     </ion-buttons>
-    <ion-title >Registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content >
+<ion-content>
 
   <form [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
 
@@ -20,24 +17,53 @@
       <ion-input label="Email" labelPlacement="floating" placeholder="name@example.com" formControlName="email"></ion-input>
     </ion-item>
 
+    <div class="error">
+      <ng-container *ngFor="let validation of validateMessage.email">
+        <div *ngIf="registerForm.get('email')?.hasError(validation.type) && registerForm.get('email')?.dirty">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
     <ion-item>
       <ion-input label="Password" labelPlacement="floating" placeholder="*******" formControlName="password"></ion-input>
     </ion-item>
+
+    <div class="error">
+      <ng-container *ngFor="let validation of validateMessage.password">
+        <div *ngIf="(registerForm.get('password')?.hasError(validation.type) ||
+                    (validation.type === 'minlength' && registerForm.get('password')?.value?.length < 6))
+                    && registerForm.get('password')?.dirty">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
 
     <ion-item>
       <ion-input label="Name" labelPlacement="floating" placeholder="Nombre" formControlName="name"></ion-input>
     </ion-item>
 
+    <div class="error">
+      <ng-container *ngFor="let validation of validateMessage.name">
+        <div *ngIf="registerForm.get('name')?.hasError(validation.type) && registerForm.get('name')?.dirty">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+
     <ion-item>
       <ion-input label="Last Name" labelPlacement="floating" placeholder="Apellido" formControlName="last_name"></ion-input>
     </ion-item>
 
-    <ion-button
-    type="submit"
-    [disabled]="!registerForm.valid">
-    Registrarse
-    </ion-button>
+    <div class="error">
+      <ng-container *ngFor="let validation of validateMessage.last_name">
+        <div *ngIf="registerForm.get('last_name')?.hasError(validation.type) && registerForm.get('last_name')?.dirty">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
 
+    <ion-button type="submit" [disabled]="!registerForm.valid">Registrarse</ion-button>
 
   </form>
 </ion-content>

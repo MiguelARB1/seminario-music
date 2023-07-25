@@ -1,0 +1,52 @@
+// Estilos generales
+ion-content {
+    --ion-background-color: #121212; /* Color de fondo oscuro */
+  }
+  
+  ion-item ion-label {
+    color: white; /* Color del texto de las etiquetas del formulario */
+  }
+  
+  ion-input {
+    --color: #1db954; /* Color del texto del input (verde) */
+    --placeholder-color: #b3b3b3; /* Color del texto de placeholder */
+    --highlight-color-focused: #1db954; /* Color del borde del input cuando está enfocado */
+  }
+  
+  .error div {
+    color: red; /* Color del mensaje de error */
+  }
+  
+  ion-button {
+    --background: #1db954; /* Color de fondo del botón */
+    --color: white; /* Color del texto del botón */
+    margin-top: 20px; /* Espaciado superior del botón */
+  }
+  
+  // Estilos para el título
+  ion-title {
+    font-size: 28px; /* Tamaño del texto del título */
+    font-weight: bold; /* Peso del texto del título */
+    color: #1db954; /* Color del texto del título (verde) */
+  }
+  
+  // Estilos específicos para el formulario de registro
+  ion-header {
+    ion-toolbar {
+      --background: #282828; /* Color de fondo de la barra de navegación */
+      ion-title {
+        font-size: 24px; /* Tamaño del texto del título en la barra de navegación */
+        font-weight: bold; /* Peso del texto del título en la barra de navegación */
+      }
+      ion-button {
+        color: white; /* Color del texto de los botones en la barra de navegación */
+      }
+    }
+  }
+  
+  ion-content {
+    ion-button {
+      --background: #1db954; /* Color de fondo del botón de registro */
+    }
+  }
+  

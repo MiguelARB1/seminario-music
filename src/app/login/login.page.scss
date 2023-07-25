@@ -1,24 +1,31 @@
-.error{
-    font-size: 15px;
-    color:#ff0000;
-  }
-  
-  .color_form{
-    color:#000dff;
-    
-  }
- 
-  .titulo{
-    font-size: 20px;
-    color: var(--morado);
-  
-  }
+/* Estilos generales */
+ion-content {
+  --ion-background-color: #121212; /* Color de fondo oscuro */
+}
 
+/* Estilos para el formulario */
+ion-item.color_form ion-label {
+  color: white; /* Color del texto de las etiquetas del formulario */
+}
 
-  .close-icon{
+ion-input {
+  --color: #1db954; /* Color del texto del input (verde) */
+  --placeholder-color: #b3b3b3; /* Color del texto de placeholder */
+  --highlight-color-focused: #1db954; /* Color del borde del input cuando está enfocado */
+}
 
-    font-size: 40px;
-    color: var(--rosa);
-    display: block;
-    margin-left: auto;
-  }
+.error div {
+  color: red; /* Color del mensaje de error */
+}
+
+ion-button {
+  --background: #1db954; /* Color de fondo del botón */
+  --color: white; /* Color del texto del botón */
+  margin-top: 20px; /* Espaciado superior del botón */
+}
+
+/* Estilos para el título y campos de Email y Password */
+ion-title.titulo,
+ion-item.color_form ion-input {
+  color: #1db954 !important; /* Color del texto del título y campos de Email (verde) */
+}
