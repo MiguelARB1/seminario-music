@@ -73,23 +73,18 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
-  registerUser(userData: any) {
-    console.log(userData);
 
-    // Marcamos todos los campos como "touched" para que se muestren los mensajes de error.
-    this.registerForm.markAllAsTouched();
-
-    // Si el formulario es válido, se realiza el registro.
-    if (this.registerForm.valid) {
-      this.authService.registerUser(userData).then(() => {
-        this.navCtrl.navigateBack('/login');
-      });
-    } else {
-      console.log('Por favor, complete todos los campos requeridos correctamente.');
-    }
-  }
 
   goToLogin() {
     this.navCtrl.navigateForward('/login');
   }
+  
+  registerUser(userData:any){
+    console.log(userData);
+    this.authService.registerUser(userData).subscribe(res => {
+      console.log(res)
+      this.navCtrl.navigateBack("/login");
+    })
+  }
+  
 }
